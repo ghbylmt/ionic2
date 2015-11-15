@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src=".lib/ionic/js/ionic.bundle.js"></script>
+  <title> 登陆页面</title>
+</head>
+<body ng-controller="MainCtrl">
+<ion-side-menus>
+  <ion-side-menu-content>
+    内容!
+    <button ng-click="toggleLeftSideMenu()">
+      切换左侧侧栏菜单
+    </button>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    左侧菜单!
+    <ion-side-menu>
+</ion-side-menus>
+</body>
+<script type="javascript">
+  function MainCtrl($scope, $ionicSideMenuDelegate) {
+    $scope.toggleLeftSideMenu = function () {
+      $ionicSideMenuDelegate.toggleLeft();
+    };
+  }
+</script>
+</html>
